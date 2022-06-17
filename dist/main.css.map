@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAGA,EACE,qBAAA,CAGF,KACE,8BAAA,CACA,UARc","file":"main.css","sourcesContent":["$font-stack: Helvetica, sans-serif;\n$primary-color: blue;\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  font: 100% $font-stack;\n  color: $primary-color;\n}\n"]}
