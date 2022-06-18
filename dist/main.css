@@ -1,2 +1,2 @@
-*{box-sizing:border-box}body{font:100% Helvetica,sans-serif;color:#00f}
+@import"https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap";*{box-sizing:border-box}body{background-color:#e5e5e5;color:#121212;font-family:Roboto,sans-serif;width:100%;height:100vh}main{width:1440px;height:960px;position:relative;background-color:#fff;margin:5% auto}section.container{width:100%;height:100%}
 /*# sourceMappingURL=main.css.map */
