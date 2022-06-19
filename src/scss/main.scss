@@ -114,7 +114,7 @@ section.container {
   background-color: rgba($dark_1_color, 0.5);
   animation-name: fadeIn;
   animation-duration: 1.5s;
-  .modal-content {
+  .modal-body {
     color: $dark_1_color;
     width: 920px;
     height: 210px;
@@ -153,6 +153,40 @@ section.container {
       &:focus {
         filter: brightness(120%);
       }
+    }
+  }
+}
+
+.modal-body {
+  .modal-header {
+    color: $dark_1_color;
+    position: absolute;
+    width: 380px;
+    height: 50px;
+    left: 95px;
+    top: 56px;
+    font-family: $primary_font_family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0;
+  }
+  .modal-text {
+    position: absolute;
+    width: 380px;
+    height: 24px;
+    left: 95px;
+    top: 130px;
+    font-family: $primary_font_family;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark_1_color;
+    margin: 0;
+    span {
+      font-weight: 600;
     }
   }
 }
