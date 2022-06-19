@@ -4,6 +4,7 @@
 // Variables
 $primary-color: #e4c1ae;
 $dark_1_color: #121212;
+$background_white: white;
 $primary_font_family: "Roboto", sans-serif;
 
 * {
@@ -18,7 +19,7 @@ body {
     height: 960px;
     margin: auto;
     position: relative;
-    background-color: white;
+    background-color: $background_white;
     margin-top: 5%;
     margin-bottom: 5%;
   }
@@ -87,7 +88,7 @@ section.container {
         font-weight: 700;
         font-size: 16px;
         line-height: 100%;
-        color: white;
+        color: $background_white;
         border: none;
         cursor: pointer;
         position: absolute;
@@ -120,24 +121,40 @@ section.container {
     left: 260px;
     top: 375px;
     position: absolute;
-    background-color: white;
+    background-color: $background_white;
     border: none;
     /* The Close Button */
-    .modal-close {
+    .close-modal {
+      // background-color: yellowgreen; //This property is only for TESTING only!
+      border: none;
       width: 24px;
       height: 24px;
-      float: left;
-      font-size: 28px;
-      font-weight: bold;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      cursor: pointer;
+      &:before,
+      &:after {
+        position: absolute;
+        left: 11px;
+        top: 6px;
+        content: "";
+        height: 12px;
+        width: 2px;
+        background-color: black;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      &:hover,
+      &:focus {
+        filter: brightness(120%);
+      }
     }
   }
-}
-
-.modal-close:hover,
-.modal-close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* FadeIn Animation */
