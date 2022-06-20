@@ -134,9 +134,32 @@ section.container {
     position: absolute;
     background-color: $background_white;
     border: none;
+    /* The Main Content */
+    .modal-content {
+      .modal-header {
+        @include header;
+        position: absolute;
+        width: 380px;
+        height: 50px;
+        left: 95px;
+        top: 56px;
+        margin: 0;
+      }
+      .modal-text {
+        @include paragraph;
+        position: absolute;
+        width: 380px;
+        height: 24px;
+        left: 95px;
+        top: 130px;
+        margin: 0;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
     /* The Close Button */
     .close-modal {
-      // background-color: yellowgreen; //This property is only for TESTING only!
       border: none;
       width: 24px;
       height: 24px;
@@ -165,29 +188,13 @@ section.container {
         filter: brightness(120%);
       }
     }
-  }
-}
-
-.modal-body {
-  .modal-header {
-    @include header;
-    position: absolute;
-    width: 380px;
-    height: 50px;
-    left: 95px;
-    top: 56px;
-    margin: 0;
-  }
-  .modal-text {
-    @include paragraph;
-    position: absolute;
-    width: 380px;
-    height: 24px;
-    left: 95px;
-    top: 130px;
-    margin: 0;
-    span {
-      font-weight: 600;
+    /* The Reset Button */
+    button.button-reset {
+      @include button_style;
+      background-color: #ae36f3;
+      position: absolute;
+      bottom: 56px;
+      right: 40px;
     }
   }
 }
