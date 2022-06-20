@@ -1,48 +1,7 @@
-// Roboto Fonts import
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+@import "definitions";
+@import "media-queries";
 
-// Variables
-$primary-color: #e4c1ae;
-$dark_1_color: #121212;
-$background_white: white;
-$primary_font_family: "Roboto", sans-serif;
-
-// Mixins
-@mixin text_base {
-  font-family: $primary_font_family;
-  font-style: normal;
-  color: $dark_1_color;
-}
-@mixin header {
-  @include text_base;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 50px;
-}
-@mixin paragraph {
-  @include text_base;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-}
-@mixin button_style {
-  padding: 16px 40px;
-  width: 128px;
-  height: 48px;
-  border-radius: 32px;
-  font-family: $primary_font_family;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
-  color: $background_white;
-  border: none;
-  cursor: pointer;
-  &:hover {
-    filter: brightness(80%);
-  }
-}
-
+// General
 * {
   box-sizing: border-box;
 }
@@ -206,80 +165,5 @@ section.container {
   }
   to {
     opacity: 1;
-  }
-}
-
-// MediaQueries
-@media only screen and (max-width: 1440px) {
-  body {
-    background-color: lightyellow;
-    main {
-      width: 1200px;
-      height: 960px;
-      margin: auto;
-    }
-    section.container {
-      figure {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        div.image {
-          width: 505px;
-          height: 330px;
-          overflow: hidden;
-          position: relative;
-          left: unset;
-          top: 50px;
-          img {
-            width: 505px;
-            height: auto;
-            margin: -3px 0 -3px 0;
-          }
-        }
-        div.content {
-          width: 380px;
-          height: 250px;
-          position: relative;
-          left: unset;
-          top: unset;
-          margin-top: 80px;
-        }
-      }
-    }
-  }
-  .modal {
-    .modal-body {
-      width: 620px;
-      margin-left: auto;
-      margin-right: auto;
-      top: 375px;
-      // The Main Content
-      .modal-content {
-        .modal-header {
-          @include header;
-          left: 40px;
-          top: 56px;
-        }
-        .modal-text {
-          @include paragraph;
-          left: 40px;
-          top: 130px;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  body {
-    background-color: red;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: blue;
   }
 }

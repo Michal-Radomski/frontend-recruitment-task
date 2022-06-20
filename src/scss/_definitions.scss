@@ -1,0 +1,44 @@
+// Roboto Fonts import
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+// Variables
+$primary-color: #e4c1ae;
+$dark_1_color: #121212;
+$background_white: white;
+$primary_font_family: "Roboto", sans-serif;
+
+// Mixins
+@mixin text_base {
+  font-family: $primary_font_family;
+  font-style: normal;
+  color: $dark_1_color;
+}
+@mixin header {
+  @include text_base;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+}
+@mixin paragraph {
+  @include text_base;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin button_style {
+  padding: 16px 40px;
+  width: 128px;
+  height: 48px;
+  border-radius: 32px;
+  font-family: $primary_font_family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: $background_white;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(80%);
+  }
+}
