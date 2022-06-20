@@ -119,8 +119,8 @@ section.container {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width of the <main> ! */
-  height: 100%; /* Full height of the <main> ! */
+  width: 100%; // Full width of the <main> !
+  height: 100%; // Full height of the <main> !
   overflow: auto;
   background-color: rgba($dark_1_color, 0.5);
   animation-name: fadeIn;
@@ -134,7 +134,7 @@ section.container {
     position: absolute;
     background-color: $background_white;
     border: none;
-    /* The Main Content */
+    // The Main Content
     .modal-content {
       .modal-header {
         @include header;
@@ -158,7 +158,7 @@ section.container {
         }
       }
     }
-    /* The Close Button */
+    // The Close Button
     .close-modal {
       border: none;
       width: 24px;
@@ -188,7 +188,7 @@ section.container {
         filter: brightness(120%);
       }
     }
-    /* The Reset Button */
+    // The Reset Button
     button.button-reset {
       @include button_style;
       background-color: #ae36f3;
@@ -199,12 +199,34 @@ section.container {
   }
 }
 
-/* FadeIn Animation */
+// FadeIn Animation
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+// MediaQueries
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: pink;
+  }
+}
+@media only screen and (max-width: 992px) {
+  body {
+    background-color: red;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: blue;
   }
 }
