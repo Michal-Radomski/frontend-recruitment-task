@@ -1,10 +1,11 @@
 @import "definitions";
 @import "media-queries";
 
-// General
+// General Settings
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #e5e5e5;
   width: 100%;
@@ -63,7 +64,7 @@ section.container {
       }
       button#open-modal {
         @include button_style;
-        background-color: #e4c1ae;
+        background-color: $primary-color;
         position: absolute;
         bottom: 0;
       }
