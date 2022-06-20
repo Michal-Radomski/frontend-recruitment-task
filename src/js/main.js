@@ -6,13 +6,13 @@ const closeModal = document.querySelector(".close-modal");
 // Open modal
 openModal.onclick = function () {
   modal.style.display = "block";
-  console.log("Modal was opened");
+  // console.log("Modal was opened");
 };
 
 // Close modal by X button
 closeModal.onclick = function () {
   modal.style.display = "none";
-  console.log("Modal was closed");
+  // console.log("Modal was closed");
 };
 
 // Close modal when a user clicks outside of the modal

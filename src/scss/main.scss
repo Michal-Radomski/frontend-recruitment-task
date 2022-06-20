@@ -7,6 +7,42 @@ $dark_1_color: #121212;
 $background_white: white;
 $primary_font_family: "Roboto", sans-serif;
 
+// Mixins
+@mixin text_base {
+  font-family: $primary_font_family;
+  font-style: normal;
+  color: $dark_1_color;
+}
+@mixin header {
+  @include text_base;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+}
+@mixin paragraph {
+  @include text_base;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin button_style {
+  padding: 16px 40px;
+  width: 128px;
+  height: 48px;
+  border-radius: 32px;
+  font-family: $primary_font_family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: $background_white;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(80%);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -54,48 +90,23 @@ section.container {
       position: absolute;
       left: 830px;
       top: 136px;
-      // background-color: lightyellow; //This property is only for TESTING only!
       h1 {
+        @include header;
         width: 380px;
         height: 50px;
-        font-family: $primary_font_family;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 42px;
-        line-height: 50px;
-        color: $dark_1_color;
         margin-top: 0;
         margin-bottom: 24px;
       }
       p {
+        @include paragraph;
         width: 380px;
         height: 96px;
-        font-family: $primary_font_family;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
-        color: $dark_1_color;
       }
       button#open-modal {
-        padding: 16px 40px;
-        width: 128px;
-        height: 48px;
+        @include button_style;
         background-color: #e4c1ae;
-        border-radius: 32px;
-        font-family: $primary_font_family;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 100%;
-        color: $background_white;
-        border: none;
-        cursor: pointer;
         position: absolute;
         bottom: 0;
-        &:hover {
-          filter: brightness(80%);
-        }
       }
     }
   }
@@ -159,31 +170,21 @@ section.container {
 
 .modal-body {
   .modal-header {
-    color: $dark_1_color;
+    @include header;
     position: absolute;
     width: 380px;
     height: 50px;
     left: 95px;
     top: 56px;
-    font-family: $primary_font_family;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 50px;
     margin: 0;
   }
   .modal-text {
+    @include paragraph;
     position: absolute;
     width: 380px;
     height: 24px;
     left: 95px;
     top: 130px;
-    font-family: $primary_font_family;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    color: $dark_1_color;
     margin: 0;
     span {
       font-weight: 600;
