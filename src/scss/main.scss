@@ -210,21 +210,74 @@ section.container {
 }
 
 // MediaQueries
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1440px) {
   body {
-    background-color: pink;
+    background-color: lightyellow;
+    main {
+      width: 1200px;
+      height: 960px;
+      margin: auto;
+    }
+    section.container {
+      figure {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        div.image {
+          width: 505px;
+          height: 330px;
+          overflow: hidden;
+          position: relative;
+          left: unset;
+          top: 50px;
+          img {
+            width: 505px;
+            height: auto;
+            margin: -3px 0 -3px 0;
+          }
+        }
+        div.content {
+          width: 380px;
+          height: 250px;
+          position: relative;
+          left: unset;
+          top: unset;
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+  .modal {
+    .modal-body {
+      width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+      top: 375px;
+      // The Main Content
+      .modal-content {
+        .modal-header {
+          @include header;
+          left: 40px;
+          top: 56px;
+        }
+        .modal-text {
+          @include paragraph;
+          left: 40px;
+          top: 130px;
+        }
+      }
+    }
   }
 }
+
 @media only screen and (max-width: 992px) {
   body {
     background-color: red;
   }
 }
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: blue;
-  }
-}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: blue;
